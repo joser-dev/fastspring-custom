@@ -6,25 +6,20 @@
  * @package           fastspring
  *
  * @wordpress-plugin
- * Plugin Name:       FastSpring Cerberus
+ * Plugin Name:       FastSpring
  * Plugin URI:        FastSpring.com
- * Description:       Version 1.8.5 of FastSpring plugin, with custom integration modifications for CerberusFTP.com
- * Version:           1.0.10
+ * Description:      The FastSpring WordPress Plugin is a tool that lets you integrate your FastSpring Store with your WordPress website.
+ * Version:           1.8.5
  * Author:            FastSpring WordPress Team
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       fastspring
  */
-
-$fs_version = "1.0.10";
-
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
-  die;
+	die;
 }
 
-// Include custom Cerberus functionality
-require_once("fastspring-cerberus/plugin.php");
 /**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-fastspring-activator.php

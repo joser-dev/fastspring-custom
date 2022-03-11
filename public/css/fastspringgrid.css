@@ -2218,19 +2218,27 @@ fieldset[disabled] a.fastspring_btn {
 
 .fastspring_btn-success {
   color: #fff !important;
+  background-color: #5cb85c;
+  border-color: #5cb85c;
 }
 
 .fastspring_btn-success:hover {
   color: #fff !important;
+  background-color: #449d44;
+  border-color: #419641;
 }
 
 .fastspring_btn-success:focus, .fastspring_btn-success.focus {
   color: #fff !important;
+  background-color: #449d44;
+  border-color: #419641;
 }
 
 .fastspring_btn-success:active, .fastspring_btn-success.active,
 .open > .fastspring_btn-success.dropdown-toggle {
   color: #fff !important;
+  background-color: #449d44;
+  border-color: #419641;
   background-image: none;
 }
 
@@ -2832,6 +2840,7 @@ input[type="radio"].option-input, input[type="checkbox"].option-input {
   -o-appearance: none;
   appearance: none;
   position: relative;
+  top: 13.33333px;
   width: 20px;
   height: 20px;
   -webkit-transition: all 0.15s ease-out 0;
