@@ -1,0 +1,34 @@
+// The container for our product "boxes"
+#fs-product-box-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 14px;
+  grid-row-gap: 0px;
+
+  @media screen and (min-width: 501px) and (max-width: 980px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows:    repeat(2, 1fr);
+    grid-row-gap: 14px;
+  }
+
+  @media screen and (max-width: 500px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-row-gap: 14px;
+  }
+
+  // Reset columns to auto widths, reset margins since we
+  // will use grid gaps
+  @mixin reset-et-cols {
+    width: auto !important;
+    margin: 0px !important;
+  };
+  .et_pb_column, 
+  .et_pb_row_4col > .et_pb_column.et_pb_column_1_4 {
+    @include reset-et-cols;
+    @media (max-width: 980px) {
+      @include reset-et-cols;
+    }
+  }
+}

@@ -1,0 +1,287 @@
+$black: #2B3338;
+$border-gray: #ADADAD;
+
+@mixin shared-close-button {
+    border: 1px solid gray;
+    font-size: 12px !important;;
+    padding: 1px 12px !important;
+    display: inline-block;
+    color: gray !important;
+    border-radius: 4px;
+    &:hover {
+      color: gray !important;
+      background-color: lightgray !important;
+    }
+}
+
+.fastspring_rs_modal-content {
+  max-width: 90% !important;
+  width: 980px !important;
+
+  .fastspring_rs_modal-header {
+    background:white !important;
+    color: #2b3338 !important;
+    font-family: $montserrat-bold;
+    padding: 10px 0px;
+    border-bottom: 1px solid #d7d7d7;
+    margin: 0 24px;
+
+    @media (max-width: 447px) {
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      @media (max-width: 447px) {
+        padding-top: 20px;
+        clear: right;
+      }
+    }
+
+    // Close Cart button style
+    .fs-close-cart-button {
+      position: relative;
+      top: 7px;
+      @include shared-close-button;
+      @media (min-width: 448px) {
+        float:right;
+      }
+    }
+  }
+
+  .fastspring_rs_modal-body {
+    padding-right: 6px;
+    padding-left:  6px;
+    .fastspring_container {
+      margin-top: 0px;
+    }
+  }
+
+
+  // Force overall typography
+  h4 {
+    font-family: $montserrat-bold;
+  }
+  // Hide the border on <hr> els
+  hr {
+    border-style: none;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  // Force overall button styles
+  .fastspring_btn, .fastspring_btn-success {
+    font-family: $montserrat;
+    text-transform: uppercase;
+    background: $teal;
+    transition: all 250ms;
+    border-color: $teal;
+    &:hover {
+      background: darken($teal, 15%);
+      border-color: darken($teal, 15%);
+    }
+   }
+
+  
+  // Force remove cart button style
+  a.removecart {
+    @include shared-close-button;
+    margin-top: 10px;
+    .fastspring_closebtn {
+      color: gray !important;
+    }     
+  }
+
+  // Force option input styles
+  input.option-input:checked {
+    background: url("../images/selected.png") !important;
+    background-size: 22px 22px                !important;
+    background-position: -1px -1px            !important;
+  }
+  input[type="radio"].option-input:checked::before, input[type="checkbox"].option-input:checked::before {
+    content: '';
+    display: none;
+  }
+
+  .fastspring_rs_modal-header {
+      } // end fastspring_rs_modal-header
+
+  .xs-border, .sm-border {
+    border: none !important;
+    padding: 0px !important;
+  }
+
+  .fastspring_row.cartitemrows {
+    padding-top: 20px;
+    .fastspring_col-xs-12 {
+      img {
+        width: 50px;
+      }
+      h3 {
+        font-family: $montserrat-bold;
+        font-size:   18px;
+        line-height: 1.15em;
+      }
+    }
+  }
+  // This class controls the Service Agreement Options
+  .fastspring-product-config-single {
+    padding-top: 30px;
+    border-top: 1px solid #adadad;
+    margin-top: 30px;
+    padding-left: 0px !important;
+    h4 {
+      font-size: 20px;
+      padding-bottom: 20px;
+    }
+  }
+
+  .fs-cart-item-price {
+    text-align: right;
+    @media screen and (max-width: 767px) {
+      text-align: center;
+      padding-top: 14px;
+    }
+  }
+
+  .fastspring-product-upsell, .fs-product-options, .fs-product-cross-sells {
+    padding-top: 10px;
+    clear: left;
+    .offset {
+      background:     white !important;
+      box-shadow:     0px 0px 10px rgba(0,0,0,0.2);
+      padding-top:    14px;
+      padding-bottom: 14px;
+      .fastspring_row {
+        margin: 0px;
+      }
+      h4 {
+        font-family: $montserrat;
+        color: $teal;
+        padding-left: 14px;
+        padding-bottom: 16px;
+      }
+      .upsell-product-name-container {
+        span.item-name {
+          font-family: $montserrat-bold;
+        }
+      }
+      .cta-container {
+        padding-top: 15px;
+      }
+    }
+  }
+
+  // Empty cart message
+  .empty-cart {
+    padding-top: 65px;
+    h1 {
+      font-family: $montserrat-bold;
+    }
+    a {
+      font-family: $montserrat;
+      color: $teal;
+    }
+  }
+
+  // Coupon code input
+  .fs-coupon-code-container {
+    text-align: center;
+    border-bottom: 1px dotted $border-gray;
+    padding: 20px 0;
+    & * {
+      display: inline-block;
+    }
+    label {
+      font-family: $montserrat-bold;
+      font-size: 20px;
+      @media (max-width: 715px) {
+        text-align: center;
+        width: 100%;
+        padding-bottom: 15px;
+      }
+    }
+    input {
+      max-width: 300px;
+      background: #F0F0F0;
+    }
+    a.fastspring_btn {
+      padding: 8px 12px; 
+      position: relative;
+      top: -2px;
+      @media (max-width: 485px) {
+        margin-top: 12px;
+      }
+    }
+  }
+  
+  // Order price total and Checkout button
+  .fs-total-and-checkout {
+    text-align: center;
+    padding-top: 20px;
+    font-family: $montserrat-bold;
+    h3 {
+      margin: 0px;
+      padding: 0px;
+    }
+    a.checkoutbutton {
+      display: inline-block;
+      float: none;
+      max-width: 300px;
+      margin-right: auto;
+      margin-left: auto;
+      font-size: 20px;
+      margin-top: 10px;
+    }
+  }
+
+  // Update quantity button
+  a.fs-update-quantity {
+    background: $teal;
+    font-family: $montserrat;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: white;
+    border-radius: 4px;
+    padding: 6px;
+    height: 34px;
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+    top: 1px;
+    position: relative;
+    transition: all 200ms;
+
+    &:hover {
+      background: darken($teal, 15%);
+      border-color: darken($teal, 15%);
+    }
+  }
+}
+
+// "Pill" for next recurring charge (in product detail)
+.fs-info-pill {
+  font-size:      10px;
+  line-height:    1.3em;
+  text-transform: uppercase;
+  border:         1px solid gray;
+  border-radius:  20px;
+  padding:        4px 8px;
+  margin-top:     7px;
+  display:        inline-block;
+  @media (max-width: 715px) {
+    border-radius: 5px;
+  }
+}
+
+// Override alert styles
+.fastspring_alert {
+  background: #e66359 !important;
+  color: white;
+  padding: 6px 12px;
+  margin: 10px 16px;
+  h2 {
+    font-family: $montserrat;
+    font-size: 18px;
+    color: white;
+  }
+}

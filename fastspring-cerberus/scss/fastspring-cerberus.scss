@@ -1,0 +1,28 @@
+// This is the main CSS file for the FastSpring / Cerberus integration
+// This file should only include other files
+
+$teal: #3B97A2;
+$black: #333435;
+$montserrat:       "MontserratR", "Montserrat", sans-serif;
+$montserrat-light: "MontserratL", "Montserrat", sans-serif;
+$montserrat-bold:  "MontserratSB", "Montserrat", sans-serif;
+
+@import 
+"_hero.scss",
+"_free-trial.scss",
+"_product-grid.scss",
+"_product-box.scss",
+"_cart-overrides",
+"_feature-list.scss";
+
+//Override for Divi
+div#pricing-main-section {
+  padding-top: 0px;
+}
+
+// Hide SBL elements until loaded
+.fs-sbl-hide {
+  display:none;
+} 
+
+

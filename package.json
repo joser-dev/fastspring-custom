@@ -1,0 +1,22 @@
+{
+  "name": "fastspring-cerberus",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Will Etling <etling@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "files-exist": "^1.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-logger": "^0.0.2",
+    "gulp-sass": "^4.0.2"
+  },
+  "browserslist": [
+    "last 5 versions",
+    "> 1%"
+  ],
+  "dependencies": {
+    "gulp-zip": "^5.0.0"
+  }
+}
